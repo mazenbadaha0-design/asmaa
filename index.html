@@ -36,7 +36,6 @@
             justify-content: center;
             align-items: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
         }
 
         .password-container {
@@ -46,7 +45,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 400px;
-            width: 100%;
             animation: slideUp 0.6s ease-out;
         }
 
@@ -80,13 +78,12 @@
             border: 2px solid #ddd;
             border-radius: 10px;
             font-size: 16px;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            transition: border-color 0.3s;
         }
 
         .password-input:focus {
             outline: none;
             border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
         }
 
         .btn {
@@ -98,23 +95,22 @@
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: transform 0.25s, box-shadow 0.25s, filter 0.25s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            filter: brightness(1.05);
         }
 
         .error-msg {
-            color: #e11d48;
+            color: red;
             margin-top: 15px;
             display: none;
             font-size: 14px;
         }
 
-        /* VIDEO PAGE (white card like screenshot) */
+        /* VIDEO PAGE */
         #videoPage {
             flex-direction: column;
             justify-content: center;
@@ -127,60 +123,52 @@
             background: white;
             padding: 40px 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
-            max-width: 800px;
+            max-width: 700px;
             width: 100%;
             animation: slideUp 0.6s ease-out;
         }
 
         .video-container h2 {
-            color: #111827;
-            margin-bottom: 15px;
-            font-size: 32px;
-            text-align: left;
-        }
-
-        .video-title-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .video-title-row span {
-            font-size: 30px;
+            color: #667eea;
+            margin-bottom: 25px;
+            font-size: 28px;
         }
 
         .video-wrapper {
             width: 100%;
             height: 260px;
-            background: #111827;
+            background: #f0f0f8;
             border-radius: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 18px;
-            overflow: hidden;
+            margin-bottom: 25px;
         }
 
         .video-wrapper video {
             width: 100%;
             height: 100%;
             border-radius: 16px;
+            object-fit: cover;
         }
 
         .video-text {
-            color: #374151;
-            margin-bottom: 25px;
-            font-size: 15px;
-            text-align: left;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         .btn-journey {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding-left: 32px;
-            padding-right: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-journey:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
         }
 
         /* JOURNEY MENU PAGE */
@@ -199,7 +187,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 500px;
-            width: 100%;
             animation: slideUp 0.6s ease-out;
         }
 
@@ -228,13 +215,16 @@
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: transform 0.25s, box-shadow 0.25s, filter 0.25s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .menu-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-            filter: brightness(1.05);
+        }
+
+        .menu-button.active {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
 
         /* TOPIC SLIDESHOW PAGE */
@@ -254,7 +244,6 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 700px;
-            width: 100%;
             animation: fadeIn 0.6s ease-out;
             min-height: 450px;
             display: flex;
@@ -288,14 +277,22 @@
             width: 100%;
             max-width: 500px;
             height: 250px;
-            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8f0 100%);
             border-radius: 15px;
             margin: 20px auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #6b7280;
+            color: #999;
             font-size: 16px;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic-slide-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
         }
 
         .topic-controls {
@@ -310,16 +307,28 @@
             padding: 10px 25px;
             font-size: 14px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-small:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
         }
 
         .btn-back {
             background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
         }
 
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.3);
+        }
+
         .topic-indicator {
             color: #999;
             margin-top: 20px;
             font-size: 14px;
+            font-weight: 500;
         }
 
         /* BIRTHDAY PAGE */
@@ -338,26 +347,13 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 600px;
-            width: 100%;
-            animation: birthdayPop 0.8s ease-out;
-        }
-
-        @keyframes birthdayPop {
-            0% { transform: scale(0.9); opacity: 0; }
-            60% { transform: scale(1.03); opacity: 1; }
-            100% { transform: scale(1); }
+            animation: slideUp 0.8s ease-out;
         }
 
         .birthday-container h1 {
             color: #f5576c;
             font-size: 48px;
             margin-bottom: 20px;
-            animation: pulse 1.8s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.04); }
         }
 
         .birthday-container p {
@@ -367,6 +363,18 @@
             margin-bottom: 20px;
         }
 
+        .birthday-container p:last-of-type {
+            font-size: 20px;
+            color: #f5576c;
+            margin-top: 30px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
         .confetti {
             position: fixed;
             width: 10px;
@@ -374,7 +382,7 @@
             background: #f5576c;
             pointer-events: none;
             border-radius: 50%;
-            box-shadow: 0 0 6px rgba(0,0,0,0.2);
+            box-shadow: 0 0 5px rgba(245, 87, 108, 0.6);
         }
 
         @media (max-width: 768px) {
@@ -386,24 +394,58 @@
                 padding: 30px 20px;
             }
 
+            .password-container {
+                max-width: 90%;
+            }
+
+            .video-container {
+                max-width: 95%;
+            }
+
             .video-container h2 {
-                font-size: 26px;
+                font-size: 24px;
+            }
+
+            .video-wrapper {
+                height: 200px;
+            }
+
+            .topic-slide {
+                padding: 40px 20px;
             }
 
             .topic-slide h2 {
                 font-size: 24px;
             }
 
+            .topic-slide-image {
+                height: 180px;
+            }
+
+            .btn-small {
+                padding: 8px 20px;
+                font-size: 12px;
+            }
+
+            .birthday-container {
+                max-width: 95%;
+            }
+
             .birthday-container h1 {
                 font-size: 36px;
             }
 
-            .menu-button {
-                font-size: 14px;
+            .birthday-container p {
+                font-size: 16px;
             }
 
-            .video-wrapper {
-                height: 210px;
+            .menu-button {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+
+            .topic-controls {
+                gap: 10px;
             }
         }
     </style>
@@ -423,20 +465,14 @@
     <!-- VIDEO PAGE -->
     <div id="videoPage" class="page">
         <div class="video-container">
-            <div class="video-title-row">
-                <span>❤️</span>
-                <h2>Our Special Moment</h2>
-            </div>
+            <h2>💕 Our Special Moment</h2>
             <div class="video-wrapper">
                 <video width="100%" height="auto" controls>
-                    <!-- Replace this URL with your real video file -->
                     <source src="your-video-url-here.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-            <p class="video-text">
-                Watch our beautiful memory together. Replace "your-video-url-here.mp4" with your actual video file to relive our special moment.
-            </p>
+            <p class="video-text">Watch our beautiful memory together. Replace "your-video-url-here.mp4" with your actual video file.</p>
             <button class="btn btn-journey" onclick="goToJourney()">Go to Our Journey ➜</button>
         </div>
     </div>
@@ -642,8 +678,8 @@
         <div class="birthday-container">
             <h1>🎉 Happy Birthday! 🎂</h1>
             <p>To the most amazing person in my life,</p>
-            <p>Today is your special day, and you deserve all the love and happiness in the world.</p>
-            <p>You bring joy, love, and light into my life every single day, and I am endlessly grateful for you.</p>
+            <p>Today is your special day, and I want you to know how much you mean to me. You bring joy, love, and light into my world every single day.</p>
+            <p>May this year bring you endless happiness, beautiful memories, and all the love your heart deserves.</p>
             <p style="font-weight: bold; color: #f5576c; font-size: 22px; margin-top: 30px;">With all my love, forever yours ❤️</p>
         </div>
     </div>
@@ -699,6 +735,11 @@
             const slideIndex = topicData.startIndex + currentTopicSlideIndex;
             showTopicSlide(slideIndex);
             updateTopicIndicators();
+            
+            // Add visual feedback to menu button
+            document.querySelectorAll('.menu-button').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === topicIndex);
+            });
         }
 
         function backToMenu() {
@@ -740,17 +781,18 @@
         }
 
         function createConfetti() {
+            const colors = ['#f5576c', '#f093fb', '#667eea', '#ffd700', '#ff69b4', '#00d4ff'];
             for (let i = 0; i < 80; i++) {
                 const confetti = document.createElement('div');
                 confetti.className = 'confetti';
                 confetti.style.left = Math.random() * 100 + '%';
                 confetti.style.top = '-10px';
-                confetti.style.background = ['#f5576c', '#f093fb', '#667eea', '#ffd700'][Math.floor(Math.random() * 4)];
-                confetti.style.animation = `fall ${2 + Math.random() * 1.5}s linear`;
-                confetti.style.opacity = 0.9;
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animation = `fall ${2 + Math.random() * 2}s linear forwards`;
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
                 document.body.appendChild(confetti);
 
-                setTimeout(() => confetti.remove(), 3500);
+                setTimeout(() => confetti.remove(), 4500);
             }
         }
 
