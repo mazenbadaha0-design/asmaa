@@ -273,20 +273,22 @@
             margin-bottom: 30px;
         }
 
-        .topic-slide-image {
-            width: 100%;
-            max-width: 500px;
-            height: 320px;
-            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8f0 100%);
-            border-radius: 15px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #999;
-            font-size: 16px;
-            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+       .topic-slide-image {
+    width: 100%;
+    max-width: 500px;
+    /* no fixed height here */
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8f0 100%);
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 8px; /* small space around video/image */
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+        .topic-slide-image video {
+    width: 100%;
+    height: auto;     
+    border-radius: 12px;
+    display: block;
+            }
 
         .topic-slide-image img {
             width: 100%;
