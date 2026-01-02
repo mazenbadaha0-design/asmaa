@@ -487,7 +487,7 @@
             <button class="menu-button" onclick="startTopic(0)"> Our First Date</button>
             <button class="menu-button" onclick="startTopic(1)"> Late Night Events</button>
             <button class="menu-button" onclick="startTopic(2)"> Your Support</button>
-            <button class="menu-button" onclick="startTopic(3)"> Sushi Night</button>
+            <button class="menu-button" onclick="startTopic(3)"> Matching Vibes</button>
             <button class="menu-button" onclick="startTopic(4)"> Your Smile</button>
         </div>
     </div>
@@ -617,11 +617,10 @@
             <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
 
-        <!-- Sushi Night Topic -->
+        <!-- Matching Vibes Topic -->
         <div class="topic-slide">
-            <h2>🍣 Sushi Night</h2>
-            <p>Our Favorite Nights</p>
-            <p>Simple moments made extraordinary with you. Those nights laughing over sushi, sharing stories and dreams, are treasured forever.</p>
+            <h2> 🔗Matching Vibes</h2>
+            <p>We love how even the smallest things bring us closer, and matching our outfits is one of them. It’s not about the clothes, but about the feeling of being in sync; same vibe, same energy, same smile. Every time we match, it feels like a quiet reminder that we belong together, in the simplest and happiest way</p>
             <div class="topic-controls">
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
@@ -630,10 +629,14 @@
         </div>
 
         <div class="topic-slide">
-            <h2>🍣 Sushi Night</h2>
-            <p>Good Food, Better Company</p>
-            <div class="topic-slide-image">[Your Video or Memory]</div>
-            <p>Your laugh is my favorite sound in the world.</p>
+            <h2>🔗Matching Vibes</h2>
+            <div class="topic-slide-image">
+                <video width="100%" height="100%" autoplay playsinline controls>
+                    <source src="4th.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>😂جونا وفعالياتنا نلبس زي بعض ونعمل اوتفيت تشيك والحلو انه عنا وعنكم في مكان مناسب نعمل الفعاليات  </p>
             <div class="topic-controls">
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
@@ -642,10 +645,11 @@
         </div>
 
         <div class="topic-slide">
-            <h2>🍣 Sushi Night</h2>
-            <p>These Are My Favorite Memories</p>
-            <div class="topic-slide-image">[Your Photo Here]</div>
-            <p>With you, every moment feels like a celebration.</p>
+            <h2>🔗Matching Vibes</h2>
+             <div class="topic-slide-image">
+                <img src="4th1.jpeg" alt="Matching Vibes photo">
+            </div>
+            <p>شوفي ما احلانا واحنا لابسين كحلي زي بعض </p>
             <div class="topic-controls">
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="backToMenu()">Back to Menu</button>
@@ -710,7 +714,7 @@
             { name: 'Our First Date', slides: 3, startIndex: 0 },
             { name: 'Late Night Events', slides: 3, startIndex: 3 },
             { name: 'Your Support', slides: 3, startIndex: 6 },
-            { name: 'Sushi Night', slides: 3, startIndex: 9 },
+            { name: 'Matching Vibes', slides: 3, startIndex: 9 },
             { name: 'Your Smile', slides: 3, startIndex: 12 }
         ];
 
