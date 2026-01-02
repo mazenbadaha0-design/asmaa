@@ -120,36 +120,35 @@
         }
 
         .video-container {
-    background: white;
-    padding: 40px 40px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    max-width: 700px;
-    width: 100%;
-    animation: slideUp 0.6s ease-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+            background: white;
+            padding: 40px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            animation: slideUp 0.6s ease-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.video-placeholder {
-    width: 100%;
-    max-width: 600px;
-    background: #f0f0f0;
-    border-radius: 15px;
-    margin: 0 auto 30px auto;
-    padding: 10px;
-    overflow: hidden;
-}
+        .video-placeholder {
+            width: 100%;
+            max-width: 600px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            margin: 0 auto 30px auto;
+            padding: 10px;
+            overflow: hidden;
+        }
 
-.video-placeholder video {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-}
-
+        .video-placeholder video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
 
         .video-text {
             color: #666;
@@ -270,39 +269,37 @@
             margin-bottom: 30px;
         }
 
-       .topic-slide-image {
-    width: 100%;
-    max-width: 500px;
-    aspect-ratio: 16 / 9;
-    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8f0 100%);
-    border-radius: 15px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    overflow: hidden;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+        .topic-slide-image {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8f0 100%);
+            border-radius: 15px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.topic-slide-image video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   
-    border-radius: 15px;
-    display: block;
-}
+        .topic-slide-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            display: block;
+        }
 
-
-.topic-slide-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    border-radius: 15px;
-    display: block;
-    background: #f0f0f0; 
-}
-
+        .topic-slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            display: block;
+            background: #f0f0f0;
+        }
 
         .topic-controls {
             display: flex;
@@ -427,7 +424,6 @@
                 font-size: 24px;
             }
 
-
             .btn-small {
                 padding: 8px 20px;
                 font-size: 12px;
@@ -472,11 +468,11 @@
     <div id="videoPage" class="page">
         <div class="video-container">
             <h2>💕 Our Special Moment</h2>
-           <div class="video-placeholder">
-  <video id="ourVideo" controls autoplay playsinline>
-    <source src="ourvideo.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+            <div class="video-placeholder">
+                <video id="ourVideo" controls autoplay playsinline>
+                    <source src="ourvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <p class="video-text">Watch our beautiful memory together </p>
             <button class="btn btn-journey" onclick="goToJourney()">Go to Our Journey ➜</button>
@@ -499,7 +495,7 @@
     <!-- TOPIC SLIDESHOW PAGE -->
     <div id="topicSlideshowPage" class="page">
         <!-- Our First Date Topic -->
-        <div class="topic-slide active">
+        <div class="topic-slide">
             <h2>❤️ Our First Date</h2>
             <p>oct 9, 2025</p>
             <p>هو تمام مش اول ديت اول ديت, بس اول ديت بعد كتب كتابنا عشان هيك خلص تم الاعتماد, اكلنا,لفينا بالسيارة وكان من احلى ايام حياتي </p>
@@ -507,38 +503,36 @@
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">1</span> / 3</div>
-        </div>
-
-        <div class="topic-slide">
-            <h2>❤️ Our First Date</h2>
-            
-          <div class="topic-slide-image">
-    <video width="100%" height="100%" autoplay playsinline controls>
-        <source src="first.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
-
-            <p>فقرتنا المفضلة اللف بالسيارة ونغني سوا</p>
-            <div class="topic-controls">
-                <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
-                <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
-            </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">2</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">1</span> / 3</div>
         </div>
 
         <div class="topic-slide">
             <h2>❤️ Our First Date</h2>
             <div class="topic-slide-image">
-        <img src="first1.jpeg" alt="Our first date photo">
-    </div>
+                <video width="100%" height="100%" autoplay playsinline controls>
+                    <source src="first.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>فقرتنا المفضلة اللف بالسيارة ونغني سوا</p>
+            <div class="topic-controls">
+                <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
+                <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
+            </div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">2</span> / 3</div>
+        </div>
+
+        <div class="topic-slide">
+            <h2>❤️ Our First Date</h2>
+            <div class="topic-slide-image">
+                <img src="first1.jpeg" alt="Our first date photo">
+            </div>
             <p>!كوكيز وغروب وانت </p>
             <div class="topic-controls">
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="backToMenu()">Back to Menu</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">3</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
 
         <!-- Late Night Drive Topic -->
@@ -550,7 +544,7 @@
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">1</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">1</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -562,7 +556,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">2</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">2</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -574,7 +568,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="backToMenu()">Back to Menu</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">3</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
 
         <!-- Your Support Topic -->
@@ -586,7 +580,7 @@
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">1</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">1</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -598,7 +592,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">2</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">2</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -610,7 +604,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="backToMenu()">Back to Menu</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">3</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
 
         <!-- Sushi Night Topic -->
@@ -622,7 +616,7 @@
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">1</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">1</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -634,7 +628,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">2</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">2</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -646,7 +640,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="backToMenu()">Back to Menu</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">3</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
 
         <!-- Your Smile Topic -->
@@ -658,7 +652,7 @@
                 <button class="btn btn-small btn-back" onclick="backToMenu()">← Back</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">1</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">1</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -670,7 +664,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small" onclick="nextTopicSlide()">Next →</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">2</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">2</span> / 3</div>
         </div>
 
         <div class="topic-slide">
@@ -682,7 +676,7 @@
                 <button class="btn btn-small" onclick="prevTopicSlide()">← Previous</button>
                 <button class="btn btn-small btn-back" onclick="goToBirthday()">Happy Birthday 🎉</button>
             </div>
-            <div class="topic-indicator"><span id="topicCurrentSlide">3</span> / 3</div>
+            <div class="topic-indicator"><span class="topicCurrentSlide">3</span> / 3</div>
         </div>
     </div>
 
@@ -744,12 +738,12 @@
             currentTopic = topicIndex;
             currentTopicSlideIndex = 0;
             showPage('topicSlideshowPage');
+
             const topicData = topics[topicIndex];
             const slideIndex = topicData.startIndex + currentTopicSlideIndex;
             showTopicSlide(slideIndex);
             updateTopicIndicators();
-            
-            // Add visual feedback to menu button
+
             document.querySelectorAll('.menu-button').forEach((btn, idx) => {
                 btn.classList.toggle('active', idx === topicIndex);
             });
@@ -766,8 +760,20 @@
 
         function showTopicSlide(index) {
             const allSlides = document.querySelectorAll('.topic-slide');
-            allSlides.forEach(slide => slide.classList.remove('active'));
-            allSlides[index].classList.add('active');
+            const topicData = topics[currentTopic];
+
+            // إخفاء كل السلايدات
+            allSlides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.style.display = 'none';
+            });
+
+            // إظهار السلايد المطلوبة فقط
+            const slideEl = allSlides[index];
+            if (slideEl) {
+                slideEl.style.display = 'flex';
+                slideEl.classList.add('active');
+            }
         }
 
         function nextTopicSlide() {
@@ -787,10 +793,18 @@
         }
 
         function updateTopicIndicators() {
-            const indicators = document.querySelectorAll('#topicCurrentSlide');
-            indicators.forEach(indicator => {
-                indicator.textContent = currentTopicSlideIndex + 1;
-            });
+            const topicData = topics[currentTopic];
+            const currentNumber = currentTopicSlideIndex + 1;
+
+            const allSlides = document.querySelectorAll('.topic-slide');
+            for (let i = 0; i < topicData.slides; i++) {
+                const slideEl = allSlides[topicData.startIndex + i];
+                if (!slideEl) continue;
+                const indicator = slideEl.querySelector('.topicCurrentSlide');
+                if (indicator) {
+                    indicator.textContent = currentNumber;
+                }
+            }
         }
 
         function createConfetti() {
@@ -819,6 +833,14 @@
             }
         `;
         document.head.appendChild(style);
+
+        // إظهار أول سلايد افتراضيًا عند فتح صفحة السلايدر لأول مرة
+        // حتى قبل اختيار أي توبيك، بس لو حاب تلغيها احذف السطرين الجايين
+        const allSlidesOnLoad = document.querySelectorAll('.topic-slide');
+        if (allSlidesOnLoad.length > 0) {
+            allSlidesOnLoad[0].style.display = 'flex';
+            allSlidesOnLoad[0].classList.add('active');
+        }
     </script>
 </body>
 </html>
